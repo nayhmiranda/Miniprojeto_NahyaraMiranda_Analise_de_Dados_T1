@@ -82,5 +82,40 @@ print(df.groupby('CL_SEG')['CO_ID'].count().sort_values(ascending=False))
 print('\n=== Compras por Estado Civil ===')
 print(df.groupby('CL_EC')['CO_ID'].count().sort_values(ascending=False))
 
+# SPRINT 6: CONCLUSÕES
+
+print("""
+======================= CONCLUSÕES DA ANÁLISE ==============================
+
+1. BASE DE DADOS: 830.000 registros brutos, reduzidos a 733.447 após remoção
+   de 96.553 duplicatas (~11.6% da base).
+
+2. QUALIDADE DOS DADOS: Nenhum valor nulo encontrado nas colunas principais.
+   Porém, a categoria PR_CAT contém 3.228 registros com valor '#N/D',
+   indicando produtos sem categoria definida.
+
+3. PERFIL DE FILHOS: A maioria dos clientes não tem filhos (moda = 0,
+   mediana = 0). A média de 1.15 sugere que uma parcela menor puxa
+   a média para cima, com máximo de 4 filhos.
+
+4. GÊNERO: Clientes do sexo feminino realizaram mais compras (382.427)
+   do que masculino (351.020), uma diferença de ~8%.
+
+5. CATEGORIAS: Alimentos lidera com folga (384.197 compras), seguido de
+   Higiene e Limpeza. Bebidas e Pet aparecem com volumes menores.
+
+6. CLASSE ECONÔMICA: Classe B concentra a maior parte das compras (468.505),
+   seguida de C (205.265) e A (59.677). O público de menor renda representa
+   mais volume que o de maior renda.
+
+7. ESTADO CIVIL: Separados (3) lideram em compras (189.048), seguidos de
+   Solteiros (4) e Divorciados (2). Viúvos (5) têm o menor volume (20.900).
+
+8. PROBLEMAS REMANESCENTES: Registros '#N/D' em PR_CAT foram substituídos
+   por 'Sem Categoria' (3.228 registros). A base possui 18.471 compras únicas
+   com média de aproximadamente 40 itens por nota, comportamento esperado para varejo.
+
+""")
+
 
 
