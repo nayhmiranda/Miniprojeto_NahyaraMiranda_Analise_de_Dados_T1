@@ -7,13 +7,14 @@ import numpy as np
 # 2 - IMPORTAR DADOS 
 df = pd.read_csv("Base Varejo.csv", sep=';')
 
+# SPRINT 1 - VISÃO INICIAL DOS DADOS
 # 3 - INFORMAÇÕES INICIAIS 
 print(f'Número de registros: {len(df)}')
 print('\nColunas e tipo de dados:')
 print(df.dtypes)
 print("")
 
-# TRANSFORMAÇÃO DE TIPOS
+# SPRINT 2 - TRANSFORMAÇÃO DE TIPOS
 
 # 4 - REMOVE COLUNAS VAZIAS (Unnamed)
 df = df.drop(columns=[col for col in df.columns if 'Unnamed' in col])
@@ -27,7 +28,7 @@ df['CL_SEG'] = df['CL_SEG'].str.strip().str.upper()
 df['PR_CAT'] = df['PR_CAT'].str.strip().str.upper()
 df['PR_NOME'] = df['PR_NOME'].str.strip().str.upper()
 
-# LIMPEZA DE NULOS E DUPLICATAS
+# SPRINT 3 - LIMPEZA DE NULOS E DUPLICATAS
 
 # 6 - VERIFICAÇÃO DE NULOS
 print('Nulos por coluna:')
@@ -39,6 +40,15 @@ df = df.drop_duplicates()
 print(f'Duplicatas após limpeza: {df.duplicated().sum()}')
 print(f'Registros restantes: {len(df)}')
 print('')
+
+# Tratamento de categorias inválidas (PR_CAT)
+df['PR_CAT'] = df['PR_CAT'].apply(lambda x: 'Sem Categoria' if x == '#N/D' else x)
+print('\nCategorias após tratamento:')
+print(df['PR_CAT'].value_counts())
+
+# Verificação do identificador de compra (CO_ID)
+print(f'\nTotal de compras únicas (CO_ID): {df["CO_ID"].nunique()}')
+print(f'Média de itens por compra: {len(df) / df["CO_ID"].nunique():.2f}')
 
 # SPRINT 4 - ESTATÍSTICAS DESCRITIVAS - NÚMERO DE FILHOS 
 
