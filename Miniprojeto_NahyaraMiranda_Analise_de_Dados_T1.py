@@ -27,8 +27,18 @@ df['CL_SEG'] = df['CL_SEG'].str.strip().str.upper()
 df['PR_CAT'] = df['PR_CAT'].str.strip().str.upper()
 df['PR_NOME'] = df['PR_NOME'].str.strip().str.upper()
 
-print(df.dtypes)
-print(df.head())
+# LIMPEZA DE NULOS E DUPLICATAS
+
+# 6 - VERIFICAÇÃO DE NULOS
+print('Nulos por coluna:')
+print(df.isnull().sum())
+
+# 7 - VERIFICAÇÃO E REMOÇÃO DE DUPLICATAS
+print(f'\nDuplicatas encontradas: {df.duplicated().sum()}')
+df = df.drop_duplicates()
+print(f'Duplicatas após limpeza: {df.duplicated().sum()}')
+print(f'Registros restantes: {len(df)}')
+print('')
 
 
 
