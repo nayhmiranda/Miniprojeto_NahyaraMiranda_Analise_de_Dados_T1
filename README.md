@@ -11,6 +11,19 @@ Análise exploratória de uma base de dados de varejo com 830.000 registros, des
 
 ---
 
+## 📁 Estrutura do Repositório
+```
+Miniprojeto_NahyaraMiranda_Analise_de_Dados_T1/
+│
+├── Miniprojeto_NahyaraMiranda_Analise_de_Dados_T1.py
+├── df_limpo.csv
+├── requirements.txt
+├── README.md
+└── README_NahyaraMiranda_Analise_de_Dados_T1.md
+```
+
+---
+
 ## 📖 A História da Análise
 
 O projeto começou com uma tarefa simples: carregar uma base de dados de varejo e entender o que ela tinha. Ao abrir o arquivo com `csv.DictReader`, já apareceu o primeiro problema — o CSV usava `;` como separador, não vírgula, e gerava colunas extras vazias (`Unnamed`) por causa de separadores no final de cada linha.
