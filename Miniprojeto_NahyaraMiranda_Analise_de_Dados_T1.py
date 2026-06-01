@@ -40,5 +40,19 @@ print(f'Duplicatas após limpeza: {df.duplicated().sum()}')
 print(f'Registros restantes: {len(df)}')
 print('')
 
+# ESTATÍSTICAS DESCRITIVAS - NÚMERO DE FILHOS 
+
+print('=== Estatísticas Descritivas - Número de Filhos dos Clientes ===')
+print(f'Contagem : {df["CL_FHL"].count()}')
+print(f'Média    : {df["CL_FHL"].mean():.2f}')
+print(f'Mediana  : {df["CL_FHL"].median():.2f}')
+print(f'Moda     : {df["CL_FHL"].mode()[0]}')
+print(f'Desvio P.: {df["CL_FHL"].std():.2f}')
+print(f'Mínimo   : {df["CL_FHL"].min()}')
+print(f'Máximo   : {df["CL_FHL"].max()}')
+print(f'Q1 (25%) : {df["CL_FHL"].quantile(0.25)}')
+print(f'Q2 (50%) : {df["CL_FHL"].quantile(0.50)}')
+print(f'Q3 (75%) : {df["CL_FHL"].quantile(0.75)}')
+
 
 
