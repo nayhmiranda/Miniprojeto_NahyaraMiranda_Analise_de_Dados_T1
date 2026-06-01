@@ -1,4 +1,5 @@
-# 📊 Miniprojeto_NahyaraMiranda_Analise_de_Dados_T1
+# 📊 Miniprojeto Analise de Dados com Python - SCTEC  - ANALISANDO DADOS DO VAREJO
+
 
 Análise exploratória de uma base de dados de varejo com 830.000 registros, desenvolvida como mini-projeto avaliativo do curso de Análise de Dados com Python - T1 no SCTEC.
 
