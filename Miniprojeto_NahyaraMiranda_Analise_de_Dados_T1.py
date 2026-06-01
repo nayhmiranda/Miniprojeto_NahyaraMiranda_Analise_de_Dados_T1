@@ -40,7 +40,7 @@ print(f'Duplicatas após limpeza: {df.duplicated().sum()}')
 print(f'Registros restantes: {len(df)}')
 print('')
 
-# ESTATÍSTICAS DESCRITIVAS - NÚMERO DE FILHOS 
+# SPRINT 4 - ESTATÍSTICAS DESCRITIVAS - NÚMERO DE FILHOS 
 
 print('=== Estatísticas Descritivas - Número de Filhos dos Clientes ===')
 print(f'Contagem : {df["CL_FHL"].count()}')
@@ -53,6 +53,24 @@ print(f'Máximo   : {df["CL_FHL"].max()}')
 print(f'Q1 (25%) : {df["CL_FHL"].quantile(0.25)}')
 print(f'Q2 (50%) : {df["CL_FHL"].quantile(0.50)}')
 print(f'Q3 (75%) : {df["CL_FHL"].quantile(0.75)}')
+
+# SPRINT 5: AGRUPAMENTOS
+
+# 8 - AGRUPAMENTO 1: COMPRAS POR GÊNERO
+print('=== Compras por Gênero ===')
+print(df.groupby('CL_GENERO')['CO_ID'].count().sort_values(ascending=False))
+
+# 9 - AGRUPAMENTO 2: COMPRAS POR CATEGORIA DE PRODUTO
+print('\n=== Compras por Categoria de Produto ===')
+print(df.groupby('PR_CAT')['CO_ID'].count().sort_values(ascending=False))
+
+# 10 - AGRUPAMENTO 3: COMPRAS POR CLASSE ECONÔMICA
+print('=== Compras por Classe Econômica ===')
+print(df.groupby('CL_SEG')['CO_ID'].count().sort_values(ascending=False))
+
+# 11 - AGRUPAMENTO 4: COMPRAS POR ESTADO CIVIL
+print('\n=== Compras por Estado Civil ===')
+print(df.groupby('CL_EC')['CO_ID'].count().sort_values(ascending=False))
 
 
 
