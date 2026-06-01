@@ -63,6 +63,10 @@ pip install pandas numpy
 python Miniprojeto_NahyaraMiranda_Analise_de_Dados_T1.py
 ```
 > ⚠️ O arquivo `Base Varejo.csv` deve estar na mesma pasta do script.
+> 
+> Baixe em: [Base Varejo | Kaggle](https://www.kaggle.com/datasets/namespaiva/base-varejo)
+> 
+> O arquivo `df_limpo.csv` é gerado automaticamente ao executar o script.
 
 ---
 
