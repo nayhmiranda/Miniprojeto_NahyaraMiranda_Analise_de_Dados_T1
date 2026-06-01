@@ -17,6 +17,7 @@ Análise exploratória de uma base de dados de varejo com 830.000 registros, des
 Miniprojeto_NahyaraMiranda_Analise_de_Dados_T1/
 │
 ├── Miniprojeto_NahyaraMiranda_Analise_de_Dados_T1.py
+├── Base Varejo.csv
 ├── df_limpo.csv
 ├── requirements.txt
 ├── README.md
